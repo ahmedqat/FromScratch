@@ -1,6 +1,8 @@
-@extends('layout')
+{{-- @extends('layout')
 
-@section('content')
+@section('content') --}}
+
+<x-layout>
 
 @include('partials._hero')
 @include('partials._search')
@@ -9,18 +11,21 @@
 <div class="lg:grid lg:grid-cols-2 gap-4 space-y-4 md:space-y-0 mx-4">
 
 
-@if (count($listings) == 0)
-<p> No listings found </p>
+    @if (count($listings) == 0)
+    <p> No listings found </p>
 
-@endif
+    @endif
 
-@foreach($listings as $listing)
+    @foreach($listings as $listing)
 
 {{-- @include('components.listing-card') --}}
 
     <x-listing-card :listing="$listing" />
 
 
-@endforeach
+    @endforeach
 </div>
-@endsection
+
+
+</x-layout>
+{{-- @endsection --}}

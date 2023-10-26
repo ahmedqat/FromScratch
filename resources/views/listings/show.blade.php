@@ -1,6 +1,9 @@
-@extends('layout')
+{{-- @extends('layout')
 
-@section('content')
+@section('content') --}}
+
+
+<x-layout>
 @include('partials._search')
 
 
@@ -60,5 +63,7 @@
     </x-card>
 </div>
 
+</x-layout>
 
-@endsection
+
+{{-- @endsection --}}
