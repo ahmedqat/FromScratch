@@ -15,12 +15,8 @@ use App\Models\Listing;
 |
 */
 //All Listings
-Route::get('/', function () {
-    return view('listings',[
-        'heading' => 'Latest Listings',
-        'listings' => Listing::all()
-    ]);
-});
+
+Route::get('/', 'HomeController@page')->name('index');
 
 //Single Listing
 Route::get('/listings/{id}',function($id){
