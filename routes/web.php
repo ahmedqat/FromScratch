@@ -54,7 +54,12 @@ Route::get('/listings/{listing}/edit', [ListingController::class,'edit']);
 
 //Update Listing
 
-Route::post('/listings/{listing}', [ListingController::class,'update']);
+//Traversity
+Route::put('/listings/{listing}', [ListingController::class,'update']);
+
+
+//Mr Haree Update Listing
+//Route::put('/listings/{listing}', 'ListingController@update')->name('listingUpdate');
 
 //Single Listing
 Route::get('/listings/{listing}',[ListingController::class,'show']);

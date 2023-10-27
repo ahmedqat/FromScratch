@@ -78,6 +78,7 @@ class ListingController extends Controller
 
     //Update Listing Data
 
+
     public function update(Request $request, Listing $listing){
         $formFields = $request->validate([
             'title' => 'required',
@@ -87,8 +88,6 @@ class ListingController extends Controller
             'email' => ['required','email'],
             'tags' => 'required',
             'description' => 'required',
-
-
 
         ]);
 
